@@ -1,21 +1,51 @@
 aid: tradedepot
 name: TradeDepot
-description: 'TradeDepot is a company surfaced as a portfolio company of partech and added to the API
-  Evangelist network as a stub for enrichment. Sector: Applicative SaaS. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: >-
+  TradeDepot is a Lagos-based B2B commerce and distribution platform that connects
+  consumer-goods brands and distributors with neighborhood retailers across Africa.
+  Its ShopTopUp platform lets small retailers order and pay for inventory, and its
+  first-party developer surface is a set of ShopTopUp "Agent/Shop Checkout" mobile
+  SDKs (Android, React Native, Cordova) published under github.com/tradedepot and
+  npm, initialized with partner API keys. TradeDepot publishes no public REST API,
+  developer portal, or API documentation. Backed by Partech.
 url: https://raw.githubusercontent.com/api-evangelist/tradedepot/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://www.tradedepot.co/logo512.png
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - partech
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 5
+  pass: local-v1
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
 - Applicative Saas
+- B2B Commerce
+- Retail Distribution
+- FMCG
+- Ecommerce
+- Mobile SDKs
+- Africa
+- Nigeria
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -25,3 +55,21 @@ maintainers:
 common:
 - type: Website
   url: https://www.tradedepot.co/
+- type: GitHubOrganization
+  url: https://github.com/tradedepot
+- type: Blog
+  url: https://www.tradedepot.co/blog
+- type: TermsOfService
+  url: https://www.tradedepot.co/terms
+- type: PrivacyPolicy
+  url: https://www.tradedepot.co/privacy
+- type: Packages
+  url: packages/tradedepot-packages.yml
+- type: SDKs
+  url: packages/tradedepot-packages.yml
+- type: Authentication
+  url: authentication/tradedepot-authentication.yml
+- type: LLMsTxt
+  url: llms/tradedepot-llms.txt
+- type: DomainSecurity
+  url: security/tradedepot-domain-security.yml

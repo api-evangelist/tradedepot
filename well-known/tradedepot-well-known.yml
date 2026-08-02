@@ -1,0 +1,46 @@
+generated: '2026-07-21'
+method: searched
+source: live HTTP probes of https://www.tradedepot.co and https://shoptopup.com
+notes: >-
+  Both hosts are single-page apps served from S3/CloudFront that return the SPA
+  index.html (HTTP 200) for every path, including /.well-known/*. Every probe
+  below that shows status 200 returned the HTML app shell, not the named
+  document — recorded as soft-404: none of these discovery documents actually
+  exist. No raw files were saved because no real documents were found.
+hosts:
+  - host: https://www.tradedepot.co
+    documents:
+      - path: /.well-known/security.txt
+        status: 200
+        soft404: true
+        note: SPA index.html fallback, not RFC 9116 security.txt
+      - path: /.well-known/openid-configuration
+        status: 200
+        soft404: true
+        note: SPA index.html fallback, not OIDC discovery JSON
+      - path: /.well-known/oauth-authorization-server
+        status: 200
+        soft404: true
+        note: SPA index.html fallback
+      - path: /.well-known/api-catalog
+        status: 200
+        soft404: true
+        note: SPA index.html fallback
+      - path: /.well-known/ai-plugin.json
+        status: 200
+        soft404: true
+        note: SPA index.html fallback
+      - path: /llms.txt
+        status: 200
+        soft404: true
+        note: SPA index.html fallback
+      - path: /robots.txt
+        status: 200
+        soft404: false
+        note: real robots.txt (allow all)
+  - host: https://shoptopup.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 200
+        soft404: true
+        note: SPA index.html fallback, not RFC 9116 security.txt

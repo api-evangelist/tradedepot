@@ -1,0 +1,44 @@
+generated: '2026-07-21'
+method: searched
+source: https://www.npmjs.com/package/cordova-plugin-shop-checkout
+notes: >-
+  TradeDepot publishes no general-purpose public API SDKs. Its first-party client
+  libraries are mobile "Agent Checkout" / "Shop Checkout" SDKs for the ShopTopUp
+  retail platform, maintained under github.com/tradedepot. The Android AAR was
+  distributed via Bintray/JCenter (dl.bintray.com/tradedepot/agent-checkout-sdk-android),
+  which has since been shut down. react-native-shop-checkout is installed from the
+  GitHub repo and is not published to the npm registry (404).
+packages:
+  - language: javascript
+    registry: npm
+    name: cordova-plugin-shop-checkout
+    description: a cordova plugin for TradeDepot Shop Checkout Point
+    url: https://www.npmjs.com/package/cordova-plugin-shop-checkout
+    install: npm install cordova-plugin-shop-checkout
+    version: 0.1.3
+    repository: https://github.com/tradedepot/cordova-shop-checkout
+    publisher: tradedepot (conwuegbuzie@tradedepot.co)
+    official: true
+  - language: javascript
+    registry: github
+    name: react-native-shop-checkout
+    description: React Native wrapper for the ShopTopUp agent checkout SDK
+    url: https://github.com/tradedepot/react-native-shop-checkout
+    install: npm install react-native-shop-checkout --save
+    official: true
+    notes: Not published to the npm registry (registry returns 404); installed from source.
+  - language: java
+    registry: maven-bintray
+    name: co.tradedepot.shop.sdk:checkout
+    description: ShopTopUp Agent Checkout Point SDK for Android (AAR)
+    url: https://github.com/tradedepot/agent-checkout-sdk-android
+    install: implementation('co.tradedepot.shop.sdk:checkout:0.0.1+4@aar')
+    official: true
+    notes: Distributed via dl.bintray.com/tradedepot/agent-checkout-sdk-android; Bintray/JCenter is now defunct.
+  - language: java
+    registry: github
+    name: cordova-agent-checkout
+    description: Cordova plugin for the ShopTopUp agent checkout
+    url: https://github.com/tradedepot/cordova-agent-checkout
+    official: true
+    notes: Source-only; not found on the npm registry.

@@ -1,0 +1,26 @@
+generated: '2026-07-21'
+method: searched
+source: https://github.com/tradedepot/react-native-shop-checkout
+docs: https://github.com/tradedepot/react-native-shop-checkout#readme
+notes: >-
+  TradeDepot publishes no public REST API or developer portal, so there are no
+  OpenAPI securitySchemes to derive from. The only documented developer-facing
+  authentication is the API key used to initialize the ShopTopUp Agent/Shop
+  Checkout mobile SDKs (Android AAR, React Native, Cordova):
+  Checkout.initialize(this, "API_KEY"). Keys are issued by TradeDepot to
+  integration partners; there is no self-serve signup or key management surface.
+summary:
+  types:
+    - apiKey
+  api_key_in:
+    - sdk-initialization
+  oauth2_flows: []
+schemes:
+  - name: shopCheckoutApiKey
+    type: apiKey
+    description: >-
+      Partner API key passed to the ShopTopUp checkout SDK at initialization
+      (co.tradedepot.shop.sdk.checkout.Checkout.initialize(context, apiKey)).
+    sources:
+      - https://github.com/tradedepot/react-native-shop-checkout#readme
+      - https://github.com/tradedepot/agent-checkout-sdk-android
